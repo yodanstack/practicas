@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos en JavaScript</title>
+    <style>
+        .button-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .small {
+            transform: scale(0.8);
+        }
+
+        .large {
+            transform: scale(1.5);
+        }
+    </style>
+</head>
+<body>
+
+<div class="button-container">
+    <button id="button1"    ('button1', 'button2')">Botón 1</button>
+    <button id="button2" onclick="resizeButtons('button2', 'button1')">Botón 2</button>
+</div>
+
+<script>
+    function resizeButtons(clickedButtonId, otherButtonId) {
+        // Obtiene los botones
+        var clickedButton = document.getElementById(clickedButtonId);
+        var otherButton = document.getElementById(otherButtonId);
+
+        // Cambia el tamaño de los botones añadiendo clases
+        clickedButton.classList.add('small');
+        otherButton.classList.add('large');
+
+        // Restablece el tamaño después de un tiempo
+        // setTimeout(function() {
+        //     clickedButton.classList.remove('small');
+        //     otherButton.classList.remove('large');
+        // }, 1000); // Duración de la animación en milisegundos
+    }
+</script>
+
+</body>
+</html>

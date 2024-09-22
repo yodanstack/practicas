@@ -1,0 +1,36 @@
+.container{
+  background-color: gray;
+  text-align: center;
+  margin: 10px 300px 0px 300px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.img img{
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.img img:hover{
+  background-color: rgb(170, 167, 167);
+}
+
+.container p{
+  font-size: 30px;
+}
+
+.container button{
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: all 3s;
+}
+
+.container button:hover{
+  background-color: rgb(191, 189, 189);
+  transform: scale(1.1);
+  
+}
